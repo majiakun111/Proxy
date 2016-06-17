@@ -19,6 +19,7 @@
 		5BC5BBB81D12D0CC007A11FB /* TimeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBB71D12D0CC007A11FB /* TimeHandler.m */; };
 		5BC5BBC41D138F9A007A11FB /* Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBC11D138F9A007A11FB /* Handler.m */; };
 		5BC5BBC51D138F9A007A11FB /* Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBC31D138F9A007A11FB /* Proxy.m */; };
+		5BC5BBC81D13AA22007A11FB /* LogHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBC71D13AA22007A11FB /* LogHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		5BC5BBC11D138F9A007A11FB /* Handler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Handler.m; sourceTree = "<group>"; };
 		5BC5BBC21D138F9A007A11FB /* Proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Proxy.h; sourceTree = "<group>"; };
 		5BC5BBC31D138F9A007A11FB /* Proxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Proxy.m; sourceTree = "<group>"; };
+		5BC5BBC61D13AA22007A11FB /* LogHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogHandler.h; sourceTree = "<group>"; };
+		5BC5BBC71D13AA22007A11FB /* LogHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				5BC5BBB41D12D04D007A11FB /* Car.m */,
 				5BC5BBB61D12D0CC007A11FB /* TimeHandler.h */,
 				5BC5BBB71D12D0CC007A11FB /* TimeHandler.m */,
+				5BC5BBC61D13AA22007A11FB /* LogHandler.h */,
+				5BC5BBC71D13AA22007A11FB /* LogHandler.m */,
 				5BC5BB881D12CF50007A11FB /* Main.storyboard */,
 				5BC5BB8B1D12CF50007A11FB /* Assets.xcassets */,
 				5BC5BB8D1D12CF50007A11FB /* LaunchScreen.storyboard */,
@@ -308,6 +313,7 @@
 				5BC5BBB51D12D04D007A11FB /* Car.m in Sources */,
 				5BC5BB811D12CF50007A11FB /* main.m in Sources */,
 				5BC5BBB81D12D0CC007A11FB /* TimeHandler.m in Sources */,
+				5BC5BBC81D13AA22007A11FB /* LogHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

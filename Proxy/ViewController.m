@@ -12,6 +12,7 @@
 #import "Car.h"
 #import "TimeHandler.h"
 #import "Proxy.h"
+#import "LogHandler.h"
 
 @interface ViewController ()
 
@@ -25,10 +26,12 @@
     
     Car *car = [[Car alloc] init];
     TimeHandler *timeHandler = [[TimeHandler alloc] initWithTarget:car];
+    id <Movable> timeM = (id <Movable>)[Proxy createProxyWithHandler:timeHandler procotolName:@"Movable"];
     
-    id <Movable> m = (id <Movable>)[Proxy createProxyWithTarget:timeHandler procotolName:@"Movable"];
-    [m runTo:@"sz"];
-    [m run];
+    LogHandler *logHandler = [[LogHandler alloc] initWithTarget:timeM];
+    id <Movable> logM = (id <Movable>)[Proxy createProxyWithHandler:logHandler procotolName:@"Movable"];
+    
+    [logM runTo:@"sz"];
 }
 
 - (void)didReceiveMemoryWarning {

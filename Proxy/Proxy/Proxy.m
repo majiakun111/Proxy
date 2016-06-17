@@ -11,23 +11,30 @@
 #import <objc/message.h>
 #import "Handler.h"
 
-const char *targetKey = nil;
+const char *handlerKey = nil;
 
 @implementation Proxy
 
-static void myforwardInvocation(__unsafe_unretained NSObject *self, SEL selector, NSInvocation *invocation) {
-    Handler *target = objc_getAssociatedObject(self, &targetKey);
-    [target invoker:invocation];
+static void myforwardInvocation(__unsafe_unretained NSObject *self, SEL selector, NSInvocation *invocation)
+{
+    Handler *handler = objc_getAssociatedObject(self, &handlerKey);
+    [handler invoker:invocation];
 }
 
-+ (instancetype)createProxyWithTarget:(Handler *)handler procotolName:(NSString *)procotolName
++ (instancetype)createProxyWithHandler:(Handler *)handler procotolName:(NSString *)procotolName
 {
-    NSString *proxyName = [NSString stringWithFormat:@"%@Proxy", NSStringFromClass([handler class])];
+    NSString *proxyName = [NSString stringWithFormat:@"%@TargetProxy%u", NSStringFromClass([handler class]), arc4random()];
     Class clazz = objc_allocateClassPair([NSObject class], [proxyName UTF8String], 0);
     if (!clazz) {
         return nil;
     }
+    
     Protocol *procotol = NSProtocolFromString(procotolName);
+    if (!procotol) {
+        NSLog(@"%@ not exists", procotolName);
+        return nil;
+    }
+    
     class_addProtocol(clazz, procotol);
     
     unsigned int outCount = 0;
@@ -42,7 +49,7 @@ static void myforwardInvocation(__unsafe_unretained NSObject *self, SEL selector
     objc_registerClassPair(clazz);
     
     id proxy = [[clazz alloc] init];
-    objc_setAssociatedObject(proxy, &targetKey, handler, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(proxy, &handlerKey, handler, OBJC_ASSOCIATION_RETAIN);
     
     return proxy;
 }
