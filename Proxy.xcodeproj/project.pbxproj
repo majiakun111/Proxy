@@ -13,8 +13,6 @@
 		5BC5BB8A1D12CF50007A11FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5BB881D12CF50007A11FB /* Main.storyboard */; };
 		5BC5BB8C1D12CF50007A11FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5BB8B1D12CF50007A11FB /* Assets.xcassets */; };
 		5BC5BB8F1D12CF50007A11FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5BB8D1D12CF50007A11FB /* LaunchScreen.storyboard */; };
-		5BC5BB9A1D12CF50007A11FB /* ProxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BB991D12CF50007A11FB /* ProxyTests.m */; };
-		5BC5BBA51D12CF50007A11FB /* ProxyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBA41D12CF50007A11FB /* ProxyUITests.m */; };
 		5BC5BBB51D12D04D007A11FB /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBB41D12D04D007A11FB /* Car.m */; };
 		5BC5BBB81D12D0CC007A11FB /* TimeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBB71D12D0CC007A11FB /* TimeHandler.m */; };
 		5BC5BBC41D138F9A007A11FB /* Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBC11D138F9A007A11FB /* Handler.m */; };
@@ -51,11 +49,7 @@
 		5BC5BB8E1D12CF50007A11FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BC5BB901D12CF50007A11FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BC5BB951D12CF50007A11FB /* ProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BC5BB991D12CF50007A11FB /* ProxyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProxyTests.m; sourceTree = "<group>"; };
-		5BC5BB9B1D12CF50007A11FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BC5BBA01D12CF50007A11FB /* ProxyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProxyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BC5BBA41D12CF50007A11FB /* ProxyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProxyUITests.m; sourceTree = "<group>"; };
-		5BC5BBA61D12CF50007A11FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BC5BBB21D12CFCE007A11FB /* Movable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movable.h; sourceTree = "<group>"; };
 		5BC5BBB31D12D04D007A11FB /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		5BC5BBB41D12D04D007A11FB /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
@@ -98,8 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				5BC5BB7E1D12CF50007A11FB /* Proxy */,
-				5BC5BB981D12CF50007A11FB /* ProxyTests */,
-				5BC5BBA31D12CF50007A11FB /* ProxyUITests */,
 				5BC5BB7D1D12CF50007A11FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -144,24 +136,6 @@
 				5BC5BB801D12CF50007A11FB /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5BC5BB981D12CF50007A11FB /* ProxyTests */ = {
-			isa = PBXGroup;
-			children = (
-				5BC5BB991D12CF50007A11FB /* ProxyTests.m */,
-				5BC5BB9B1D12CF50007A11FB /* Info.plist */,
-			);
-			path = ProxyTests;
-			sourceTree = "<group>";
-		};
-		5BC5BBA31D12CF50007A11FB /* ProxyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5BC5BBA41D12CF50007A11FB /* ProxyUITests.m */,
-				5BC5BBA61D12CF50007A11FB /* Info.plist */,
-			);
-			path = ProxyUITests;
 			sourceTree = "<group>";
 		};
 		5BC5BBBF1D138F9A007A11FB /* Proxy */ = {
@@ -321,7 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC5BB9A1D12CF50007A11FB /* ProxyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC5BBA51D12CF50007A11FB /* ProxyUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
