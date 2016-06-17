@@ -17,8 +17,8 @@
 		5BC5BBA51D12CF50007A11FB /* ProxyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBA41D12CF50007A11FB /* ProxyUITests.m */; };
 		5BC5BBB51D12D04D007A11FB /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBB41D12D04D007A11FB /* Car.m */; };
 		5BC5BBB81D12D0CC007A11FB /* TimeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBB71D12D0CC007A11FB /* TimeHandler.m */; };
-		5BC5BBBB1D12D0E0007A11FB /* Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBBA1D12D0E0007A11FB /* Handler.m */; };
-		5BC5BBBE1D12DA96007A11FB /* Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBBD1D12DA96007A11FB /* Proxy.m */; };
+		5BC5BBC41D138F9A007A11FB /* Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBC11D138F9A007A11FB /* Handler.m */; };
+		5BC5BBC51D138F9A007A11FB /* Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5BBC31D138F9A007A11FB /* Proxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +60,10 @@
 		5BC5BBB41D12D04D007A11FB /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		5BC5BBB61D12D0CC007A11FB /* TimeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeHandler.h; sourceTree = "<group>"; };
 		5BC5BBB71D12D0CC007A11FB /* TimeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeHandler.m; sourceTree = "<group>"; };
-		5BC5BBB91D12D0E0007A11FB /* Handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Handler.h; sourceTree = "<group>"; };
-		5BC5BBBA1D12D0E0007A11FB /* Handler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Handler.m; sourceTree = "<group>"; };
-		5BC5BBBC1D12DA96007A11FB /* Proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Proxy.h; sourceTree = "<group>"; };
-		5BC5BBBD1D12DA96007A11FB /* Proxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Proxy.m; sourceTree = "<group>"; };
+		5BC5BBC01D138F9A007A11FB /* Handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Handler.h; sourceTree = "<group>"; };
+		5BC5BBC11D138F9A007A11FB /* Handler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Handler.m; sourceTree = "<group>"; };
+		5BC5BBC21D138F9A007A11FB /* Proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Proxy.h; sourceTree = "<group>"; };
+		5BC5BBC31D138F9A007A11FB /* Proxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Proxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +114,7 @@
 		5BC5BB7E1D12CF50007A11FB /* Proxy */ = {
 			isa = PBXGroup;
 			children = (
+				5BC5BBBF1D138F9A007A11FB /* Proxy */,
 				5BC5BB821D12CF50007A11FB /* AppDelegate.h */,
 				5BC5BB831D12CF50007A11FB /* AppDelegate.m */,
 				5BC5BB851D12CF50007A11FB /* ViewController.h */,
@@ -121,12 +122,8 @@
 				5BC5BBB21D12CFCE007A11FB /* Movable.h */,
 				5BC5BBB31D12D04D007A11FB /* Car.h */,
 				5BC5BBB41D12D04D007A11FB /* Car.m */,
-				5BC5BBB91D12D0E0007A11FB /* Handler.h */,
-				5BC5BBBA1D12D0E0007A11FB /* Handler.m */,
 				5BC5BBB61D12D0CC007A11FB /* TimeHandler.h */,
 				5BC5BBB71D12D0CC007A11FB /* TimeHandler.m */,
-				5BC5BBBC1D12DA96007A11FB /* Proxy.h */,
-				5BC5BBBD1D12DA96007A11FB /* Proxy.m */,
 				5BC5BB881D12CF50007A11FB /* Main.storyboard */,
 				5BC5BB8B1D12CF50007A11FB /* Assets.xcassets */,
 				5BC5BB8D1D12CF50007A11FB /* LaunchScreen.storyboard */,
@@ -160,6 +157,17 @@
 				5BC5BBA61D12CF50007A11FB /* Info.plist */,
 			);
 			path = ProxyUITests;
+			sourceTree = "<group>";
+		};
+		5BC5BBBF1D138F9A007A11FB /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				5BC5BBC01D138F9A007A11FB /* Handler.h */,
+				5BC5BBC11D138F9A007A11FB /* Handler.m */,
+				5BC5BBC21D138F9A007A11FB /* Proxy.h */,
+				5BC5BBC31D138F9A007A11FB /* Proxy.m */,
+			);
+			path = Proxy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,11 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC5BBC41D138F9A007A11FB /* Handler.m in Sources */,
 				5BC5BB871D12CF50007A11FB /* ViewController.m in Sources */,
+				5BC5BBC51D138F9A007A11FB /* Proxy.m in Sources */,
 				5BC5BB841D12CF50007A11FB /* AppDelegate.m in Sources */,
-				5BC5BBBE1D12DA96007A11FB /* Proxy.m in Sources */,
 				5BC5BBB51D12D04D007A11FB /* Car.m in Sources */,
-				5BC5BBBB1D12D0E0007A11FB /* Handler.m in Sources */,
 				5BC5BB811D12CF50007A11FB /* main.m in Sources */,
 				5BC5BBB81D12D0CC007A11FB /* TimeHandler.m in Sources */,
 			);

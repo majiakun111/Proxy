@@ -12,4 +12,7 @@
 
 - (void)runTo:(NSString *)address;
 
+@optional
+- (void)run;
+
 @end

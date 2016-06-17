@@ -28,6 +28,7 @@
     
     id <Movable> m = (id <Movable>)[Proxy createProxyWithTarget:timeHandler procotolName:@"Movable"];
     [m runTo:@"sz"];
+    [m run];
 }
 
 - (void)didReceiveMemoryWarning {

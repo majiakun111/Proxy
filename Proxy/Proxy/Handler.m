@@ -32,6 +32,8 @@
     if ([self.target respondsToSelector:selector]) {
         [invocation setTarget:self.target];
         [invocation invoke];
+    } else {
+        NSLog(@"%@ not implement %@", [self.target class], NSStringFromSelector(selector));
     }
 }
 

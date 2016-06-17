@@ -12,13 +12,14 @@
 
 - (void)invoker:(NSInvocation *)invocation;
 {
+    NSLog(@"time start");
     NSTimeInterval start = [[NSDate date] timeIntervalSince1970];
     
     [super invoker:invocation];
     
     NSTimeInterval end = [[NSDate date] timeIntervalSince1970];
 
-    NSLog(@"time is %d", (int)(end - start));
+    NSLog(@"time end, consume time is %d", (int)(end - start));
 }
 
 @end
