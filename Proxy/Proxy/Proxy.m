@@ -39,10 +39,17 @@ static void myforwardInvocation(__unsafe_unretained NSObject *self, SEL selector
     
     unsigned int outCount = 0;
     struct objc_method_description *methodDescriptions = protocol_copyMethodDescriptionList(procotol, YES, YES, &outCount);
+    if (!methodDescriptions) {
+        NSLog(@"%@ not method", procotolName);
+        return nil;
+    }
+    
     for (unsigned int index = 0 ; index < outCount; index++) {
         struct objc_method_description methodDescription = methodDescriptions[0];
         class_addMethod(clazz,methodDescription.name, _objc_msgForward, methodDescription.types);
     }
+    
+    free(methodDescriptions);
     
     class_replaceMethod(clazz, @selector(forwardInvocation:), (IMP)myforwardInvocation, "v@:@");
     
