@@ -26,10 +26,10 @@
     
     Car *car = [[Car alloc] init];
     TimeHandler *timeHandler = [[TimeHandler alloc] initWithTarget:car];
-    id <Movable> timeM = (id <Movable>)[Proxy createProxyWithHandler:timeHandler procotolName:@"Movable"];
+    id <Movable> timeM = (id <Movable>)[Proxy createProxyWithHandler:timeHandler forProtocol:@protocol(Movable)];
     
     LogHandler *logHandler = [[LogHandler alloc] initWithTarget:timeM];
-    id <Movable> logM = (id <Movable>)[Proxy createProxyWithHandler:logHandler procotolName:@"Movable"];
+    id <Movable> logM = (id <Movable>)[Proxy createProxyWithHandler:logHandler forProtocol:@protocol(Movable)];
     
     [logM runTo:@"sz"];
 }

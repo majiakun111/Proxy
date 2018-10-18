@@ -12,6 +12,6 @@
 
 @interface Proxy : NSObject
 
-+ (instancetype)createProxyWithHandler:(Handler *)handler procotolName:(NSString *)procotolName;
++ (instancetype)createProxyWithHandler:(Handler *)handler forProtocol:(Protocol *)procotol;
 
 @end

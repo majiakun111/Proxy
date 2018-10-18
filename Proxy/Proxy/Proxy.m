@@ -21,17 +21,15 @@ static void myforwardInvocation(__unsafe_unretained NSObject *self, SEL selector
     [handler invoker:invocation];
 }
 
-+ (instancetype)createProxyWithHandler:(Handler *)handler procotolName:(NSString *)procotolName
-{
-    NSString *proxyName = [NSString stringWithFormat:@"%@TargetProxy%u", NSStringFromClass([handler class]), arc4random()];
-    Class clazz = objc_allocateClassPair([NSObject class], [proxyName UTF8String], 0);
-    if (!clazz) {
++ (instancetype)createProxyWithHandler:(Handler *)handler forProtocol:(Protocol *)procotol {
+    if (!procotol) {
+        NSLog(@"procotol not exists");
         return nil;
     }
     
-    Protocol *procotol = NSProtocolFromString(procotolName);
-    if (!procotol) {
-        NSLog(@"%@ not exists", procotolName);
+    NSString *proxyName = [NSString stringWithFormat:@"%@TargetProxy%u", NSStringFromClass([handler class]), arc4random()];
+    Class clazz = objc_allocateClassPair([NSObject class], [proxyName UTF8String], 0);
+    if (!clazz) {
         return nil;
     }
     
@@ -40,7 +38,7 @@ static void myforwardInvocation(__unsafe_unretained NSObject *self, SEL selector
     unsigned int outCount = 0;
     struct objc_method_description *methodDescriptions = protocol_copyMethodDescriptionList(procotol, YES, YES, &outCount);
     if (!methodDescriptions) {
-        NSLog(@"%@ not method", procotolName);
+        NSLog(@"%@ not method", NSStringFromProtocol(procotol));
         return nil;
     }
     
